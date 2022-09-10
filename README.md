@@ -1,9 +1,9 @@
 
-[![HLKY/Deforum Animation](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/XmYx/stable-diffusion-gradio-anim-opt/blob/main/P_HLKY_Deforum_StableDiffusion_GradIO_Colab.ipynb)
+[![HLKY/Deforum Animation](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/jmpaz/stable-diffusion-anim-webui/blob/main/P_HLKY_Deforum_StableDiffusion_GradIO_Colab.ipynb)
 
 # Stable Diffusion Colab including HLKY's WebUI, and Deforum's animation WebUI, both running GradIO and ngrok
 
-https://github.com/XmYx/stable-diffusion-gradio-anim-opt/blob/main/P_HLKY_Deforum_StableDiffusion_GradIO_Colab.ipynb
+https://github.com/jmpaz/stable-diffusion-anim-webui/blob/main/P_HLKY_Deforum_StableDiffusion_GradIO_Colab.ipynb
 
 Credits to HLKY, Deforum, Mimocro, Altyrne, Doggettx, Justinpinkey
 
