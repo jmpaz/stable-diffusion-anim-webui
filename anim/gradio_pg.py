@@ -17,7 +17,7 @@ def save_settings(*args):
 
 def load_settings(config)
     if config = ""
-        config = '/gdrive/MyDrive/configs/default.json'
+        config = '/gdrive/MyDrive/AI/configs/default.json'
         if not config.exists():
             print("No default config found, please save as Default first")
     with open(config) as f:

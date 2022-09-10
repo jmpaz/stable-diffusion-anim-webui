@@ -40,7 +40,7 @@ from k_diffusion import sampling
 from k_diffusion.external import CompVisDenoiser
 
 
-models_path = "/gdrive/MyDrive/" #@param {type:"string"}
+models_path = "/gdrive/MyDrive/AI/" #@param {type:"string"}
 output_path = "/content/output" #@param {type:"string"}
 
 #@markdown **Google Drive Path Variables (Optional)**

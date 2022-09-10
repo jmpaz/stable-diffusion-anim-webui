@@ -50,7 +50,7 @@ from k_diffusion import sampling
 from k_diffusion.external import CompVisDenoiser
 
 
-models_path = "/gdrive/MyDrive/" #@param {type:"string"}
+models_path = "/gdrive/MyDrive/AI/models" #@param {type:"string"}
 output_path = "/content/output" #@param {type:"string"}
 
 #@markdown **Google Drive Path Variables (Optional)**
@@ -939,7 +939,7 @@ anim = gr.Interface(
         gr.Checkbox(label='KeyFrames', value=True, visible=True),#key_frames
         gr.Textbox(label='Keyframes or Prompts for batch',  placeholder="0\n5 ", lines=5, value="0\n5"),#prompts
         gr.Textbox(label='Batch Name',  placeholder="Batch_001", lines=1, value="SDAnim"),#batch_name
-        gr.Textbox(label='Output Dir',  placeholder="/content/", lines=1, value='/gdrive/MyDrive/sd_anims/'),#outdir
+        gr.Textbox(label='Output Dir',  placeholder="/content/", lines=1, value='/gdrive/MyDrive/AI/sd_anims/'),#outdir
         gr.Slider(minimum=1, maximum=1000, step=1, label='Frames to render', value=100),#max_frames
         gr.Slider(minimum=256, maximum=1024, step=64, label='Width', value=512),#width
         gr.Slider(minimum=256, maximum=1024, step=64, label='Height', value=512),#height
@@ -994,7 +994,7 @@ batch = gr.Interface(
         gr.Checkbox(label='KeyFrames', value=True, visible=False),#key_frames
         gr.Textbox(label='Keyframes or Prompts for batch',  placeholder="0\n5 ", lines=5, value="0\n5", visible=False),#prompts
         gr.Textbox(label='Batch Name',  placeholder="Batch_001", lines=1, value="SDAnim"),#batch_name
-        gr.Textbox(label='Output Dir',  placeholder="/content/", lines=1, value='/gdrive/MyDrive/sd_anims/'),#outdir
+        gr.Textbox(label='Output Dir',  placeholder="/content/", lines=1, value='/gdrive/MyDrive/AI/sd_anims/'),#outdir
         gr.Slider(minimum=1, maximum=1000, step=1, label='Frames to render', value=100, visible=False),#max_frames
         gr.Slider(minimum=256, maximum=1024, step=64, label='Width', value=512),#width
         gr.Slider(minimum=256, maximum=1024, step=64, label='Height', value=512),#height

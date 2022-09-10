@@ -607,7 +607,7 @@ device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cp
 model = model.to("cpu")
 
 
-ckpt_var="/gdrive/MyDrive/sd-clip-vit-l14-img-embed_ema_only.ckpt"
+ckpt_var="/gdrive/MyDrive/AI/models/sd-clip-vit-l14-img-embed_ema_only.ckpt"
 config_var="stable-diffusion-gradio-anim-opt/configs/stable-diffusion/sd-image-condition-finetune.yaml"
 config_var = OmegaConf.load(config_var)
 
@@ -1202,7 +1202,7 @@ def generate(prompt, name, outdir, GFPGAN, bg_upsampling, upscale, W, H, steps, 
 
 def variations(input_im, outdir, var_samples, var_plms, v_cfg_scale, v_steps, v_W, v_H, v_ddim_eta, v_GFPGAN, v_bg_upsampling, v_upscale):
     #im_path="data/example_conditioning/superresolution/sample_0.jpg",
-    ckpt_var="/gdrive/MyDrive/sd-clip-vit-l14-img-embed_ema_only.ckpt"
+    ckpt_var="/gdrive/MyDrive/AI/models/sd-clip-vit-l14-img-embed_ema_only.ckpt"
     config_var="stable-diffusion-gradio-anim-opt/configs/stable-diffusion/sd-image-condition-finetune.yaml"
     outpath=outdir
     scale=v_cfg_scale
@@ -2091,7 +2091,7 @@ def refresh(choice):
 
 
 if opt.cfg_path == "" or opt.cfg_path == None:
-  opt.cfg_path = "/gdrive/MyDrive/sd_anim_configs"
+  opt.cfg_path = "/gdrive/MyDrive/AI/sd_anims/_configs"
 os.makedirs(opt.cfg_path, exist_ok=True)
 for files in os.listdir(opt.cfg_path):
     if files.endswith(".txt"):

@@ -58,7 +58,7 @@ from midas.dpt_depth import DPTDepthModel
 from midas.transforms import Resize, NormalizeImage, PrepareForNet
 #import k_diffusion as K
 
-models_path = "/gdrive/MyDrive/" #@param {type:"string"}
+models_path = "/gdrive/MyDrive/AI/models" #@param {type:"string"}
 output_path = "/content/output" #@param {type:"string"}
 
 mount_google_drive = False #@param {type:"boolean"}Will Remove
@@ -904,7 +904,7 @@ def load_var_model_from_config(config_var, ckpt_var, device, verbose=False, half
 
 def variations(input_im, outdir, var_samples, var_plms):
     #im_path="data/example_conditioning/superresolution/sample_0.jpg",
-    ckpt_var="/gdrive/MyDrive/sd-clip-vit-l14-img-embed_ema_only.ckpt"
+    ckpt_var="/gdrive/MyDrive/AI/models/sd-clip-vit-l14-img-embed_ema_only.ckpt"
     config_var="sd_vars/stable-diffusion/configs/stable-diffusion/sd-image-condition-finetune.yaml"
     outpath=outdir
     scale=3.0
@@ -1566,7 +1566,7 @@ with demo:
             with gr.Row():
                 with gr.Column(scale=1):
                     batch_name = gr.Textbox(label='Batch Name',  placeholder='Batch_001', lines=1, value='SDAnim', interactive=True)#batch_name
-                    outdir = gr.Textbox(label='Output Dir',  placeholder='/content', lines=1, value='/gdrive/MyDrive/sd_anims', interactive=True)#outdir
+                    outdir = gr.Textbox(label='Output Dir',  placeholder='/content', lines=1, value='/gdrive/MyDrive/AI/sd_anims', interactive=True)#outdir
                     animation_prompts = gr.Textbox(label='Prompts - divided by enter',
                                                     placeholder='a beautiful forest by Asher Brown Durand, trending on Artstation\na beautiful city by Asher Brown Durand, trending on Artstation',
                                                     lines=5, interactive=True)#animation_prompts
@@ -1690,7 +1690,7 @@ with demo:
                     b_steps = gr.Slider(minimum=1, maximum=300, step=1, label='Steps', value=100, interactive=True)#steps
                     b_scale = gr.Slider(minimum=1, maximum=25, step=1, label='Scale', value=11, interactive=True)#scale
                     b_batch_name = gr.Textbox(label='Batch Name',  placeholder='Batch_001', lines=1, value='SDAnim', interactive=True)#batch_name
-                    b_outdir = gr.Textbox(label='Output Dir',  placeholder='/content/', lines=1, value='/gdrive/MyDrive/sd_anims/', interactive=True)#outdir
+                    b_outdir = gr.Textbox(label='Output Dir',  placeholder='/content/', lines=1, value='/gdrive/MyDrive/AI/sd_anims/', interactive=True)#outdir
                     batch_btn = gr.Button('Generate')
         with gr.TabItem('InPainting'):
             with gr.Row():
@@ -1705,7 +1705,7 @@ with demo:
                     inPaint_btn = gr.Button('Generate')
                     i_strength = gr.Slider(minimum=0, maximum=1, step=0.01, label='Init Image Strength', value=0.00, interactive=True)#strength
                     i_batch_name = gr.Textbox(label='Batch Name',  placeholder='Batch_001', lines=1, value='SDAnim', interactive=True)#batch_name
-                    i_outdir = gr.Textbox(label='Output Dir',  placeholder='/content/', lines=1, value='/gdrive/MyDrive/sd_anims/', interactive=True)#outdir
+                    i_outdir = gr.Textbox(label='Output Dir',  placeholder='/content/', lines=1, value='/gdrive/MyDrive/AI/sd_anims/', interactive=True)#outdir
 
 
 
@@ -1747,7 +1747,7 @@ with demo:
                             var_samples = gr.Slider(minimum=1, maximum=4, step=1, label='Samples (keep on 1)', value=1)#n_samples
                             var_plms = gr.Dropdown(label='Sampler', choices=['k_dpm_2_a', 'k_dpm_2', 'k_euler_a', 'k_euler', 'k_heun', 'k_lms'], visible=True, interactive=True)
                         output_var = gr.Gallery()
-                    var_outdir = gr.Textbox(label='Output Folder',  value='/gdrive/MyDrive/variations', lines=1)
+                    var_outdir = gr.Textbox(label='Output Folder',  value='/gdrive/MyDrive/AI/variations', lines=1)
                     var_btn = gr.Button('Variations')
 
     var_inputs = [input_var, var_outdir, var_samples, var_plms]
@@ -1815,7 +1815,7 @@ with demo:
 
     #print(anim_output)
     #print(anim_outputs)
-    #mp4_paths.append('/gdrive/MyDrive/sd_anims/upscales/20220902151451/20220902151451.mp4')
+    #mp4_paths.append('/gdrive/MyDrive/AI/sd_anims/upscales/20220902151451/20220902151451.mp4')
 
     #print(f'orig: {mp4_paths}')
     #print(f'list: {list(mp4_paths)}')
