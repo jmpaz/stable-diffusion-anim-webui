@@ -49,7 +49,7 @@ opt = parser.parse_args()
 sys.path.extend([
     '/content/src/taming-transformers',
     '/content/src/clip',
-    '/content/stable-diffusion-gradio-anim-opt/',
+    '/content/stable-diffusion-anim-webui/',
     '/content/k-diffusion',
     '/content/pytorch3d-lite',
     '/content/AdaBins',
@@ -573,7 +573,7 @@ ckpt_config_path = custom_config_path if model_config == "custom" else os.path.j
 if os.path.exists(ckpt_config_path):
     print(f"{ckpt_config_path} exists")
 else:
-    ckpt_config_path = "/content/stable-diffusion-gradio-anim-opt/configs/stable-diffusion/v1-inference.yaml"
+    ckpt_config_path = "/content/stable-diffusion-anim-webui/configs/stable-diffusion/v1-inference.yaml"
 print(f"Using config: {ckpt_config_path}")
 
 # checkpoint path or download
